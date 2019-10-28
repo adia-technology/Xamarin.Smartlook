@@ -53,12 +53,12 @@
       <Name>Xamarin.Smartlook</Name>
       <SkipGetTargetFrameworkProperties></SkipGetTargetFrameworkProperties>
       <AdditionalProperties></AdditionalProperties>
-      <ReferenceOutputAssembly></ReferenceOutputAssembly>
+      <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="NuGet.Build.Packaging">
-      <Version>0.2.5-dev.8</Version>
+      <Version>0.2.2</Version>
       <PrivateAssets>All</PrivateAssets>
     </PackageReference>
   </ItemGroup>
