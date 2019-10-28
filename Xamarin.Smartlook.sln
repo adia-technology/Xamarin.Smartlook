@@ -1,0 +1,53 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.Smartlook.iOS", "Xamarin.Smartlook.iOS\Xamarin.Smartlook.iOS.csproj", "{085CD9D3-2A45-4EC9-8196-1EC4A42833AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.Smartlook.Android", "Xamarin.Smartlook.Android\Xamarin.Smartlook.Android.csproj", "{B70B1501-4EB5-46B9-88EC-D01F4C4DEB58}"
+EndProject
+Project("{5DD5E4FA-CB73-4610-85AB-557B54E96AA9}") = "Xamarin.Smartlook.NuGet", "Xamarin.Smartlook.NuGet\Xamarin.Smartlook.NuGet.nuproj", "{06FB6015-0AC3-4EFA-8A95-8B7129018354}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.Smartlook.Android.Bindings", "Xamarin.Smartlook.Android.Bindings\Xamarin.Smartlook.Android.Bindings.csproj", "{BB2A02CD-A2CA-4A15-A9BA-3C1734F94F44}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.Smartlook.iOS.Bindings", "Xamarin.Smartlook.iOS.Bindings\Xamarin.Smartlook.iOS.Bindings.csproj", "{D6EF2AFA-A5E6-4E09-8552-FC1ABBEF2833}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.Smartlook.Interfaces", "Xamarin.Smartlook.Interfaces\Xamarin.Smartlook.Interfaces.csproj", "{E2D96598-131A-4B48-A9B8-97B2AB7E9B28}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.Smartlook", "Xamarin.Smartlook\Xamarin.Smartlook.csproj", "{FAF56D4B-0226-4755-8A5A-B5077B879B09}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{085CD9D3-2A45-4EC9-8196-1EC4A42833AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{085CD9D3-2A45-4EC9-8196-1EC4A42833AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{085CD9D3-2A45-4EC9-8196-1EC4A42833AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{085CD9D3-2A45-4EC9-8196-1EC4A42833AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B70B1501-4EB5-46B9-88EC-D01F4C4DEB58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B70B1501-4EB5-46B9-88EC-D01F4C4DEB58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B70B1501-4EB5-46B9-88EC-D01F4C4DEB58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B70B1501-4EB5-46B9-88EC-D01F4C4DEB58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06FB6015-0AC3-4EFA-8A95-8B7129018354}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06FB6015-0AC3-4EFA-8A95-8B7129018354}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06FB6015-0AC3-4EFA-8A95-8B7129018354}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06FB6015-0AC3-4EFA-8A95-8B7129018354}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB2A02CD-A2CA-4A15-A9BA-3C1734F94F44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB2A02CD-A2CA-4A15-A9BA-3C1734F94F44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB2A02CD-A2CA-4A15-A9BA-3C1734F94F44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB2A02CD-A2CA-4A15-A9BA-3C1734F94F44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6EF2AFA-A5E6-4E09-8552-FC1ABBEF2833}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6EF2AFA-A5E6-4E09-8552-FC1ABBEF2833}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6EF2AFA-A5E6-4E09-8552-FC1ABBEF2833}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6EF2AFA-A5E6-4E09-8552-FC1ABBEF2833}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2D96598-131A-4B48-A9B8-97B2AB7E9B28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2D96598-131A-4B48-A9B8-97B2AB7E9B28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2D96598-131A-4B48-A9B8-97B2AB7E9B28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2D96598-131A-4B48-A9B8-97B2AB7E9B28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAF56D4B-0226-4755-8A5A-B5077B879B09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAF56D4B-0226-4755-8A5A-B5077B879B09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAF56D4B-0226-4755-8A5A-B5077B879B09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAF56D4B-0226-4755-8A5A-B5077B879B09}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

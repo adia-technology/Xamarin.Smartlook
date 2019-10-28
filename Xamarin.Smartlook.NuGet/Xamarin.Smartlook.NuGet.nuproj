@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.props" Condition="Exists('$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{06FB6015-0AC3-4EFA-8A95-8B7129018354}</ProjectGuid>
+    <Description>Multiplatform library that makes it easy to start tracking sessions with Smartlook.com in your Xamarin application. It encapsulates both native SDKs provided by Smartlook.
+
+</Description>
+    <PackageId>Xamarin.Smartlook</PackageId>
+    <PackageVersion>0.0.3</PackageVersion>
+    <Authors>rnowosielski</Authors>
+    <DevelopmentDependency>false</DevelopmentDependency>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Xamarin.Smartlook</RootNamespace>
+    <UsePartialTypes>false</UsePartialTypes>
+    <AssemblyName>Xamarin.Smartlook.NuGet</AssemblyName>
+    <TargetFrameworkVersion>v1.0</TargetFrameworkVersion>
+    <Owners>Rafal Nowosielski</Owners>
+    <Copyright>Adia, Just in time staffing AG</Copyright>
+    <PackageTags>smartlook, xamarin</PackageTags>
+    <Title>Xamarin.Smartlook</Title>
+    <Summary>Multiplatform library that makes it easy to start tracking sessions with Smartlook.com in your Xamarin application. It encapsulates both native SDKs provided by Smartlook.
+
+</Summary>
+    <TargetFrameworkIdentifier>Xamarin.iOS</TargetFrameworkIdentifier>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <OutputPath>bin\Debug</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Xamarin.Smartlook.Android\Xamarin.Smartlook.Android.csproj">
+      <Project>{B70B1501-4EB5-46B9-88EC-D01F4C4DEB58}</Project>
+      <Name>Xamarin.Smartlook.Android</Name>
+      <ReferenceSourceTarget>ProjectReference</ReferenceSourceTarget>
+    </ProjectReference>
+    <ProjectReference Include="..\Xamarin.Smartlook.iOS\Xamarin.Smartlook.iOS.csproj">
+      <Project>{085CD9D3-2A45-4EC9-8196-1EC4A42833AA}</Project>
+      <Name>Xamarin.Smartlook.iOS</Name>
+      <ReferenceSourceTarget>ProjectReference</ReferenceSourceTarget>
+    </ProjectReference>
+    <ProjectReference Include="..\Xamarin.Smartlook.Standard\Xamarin.Smartlook.Standard.csproj">
+      <Project>{FAF56D4B-0226-4755-8A5A-B5077B879B09}</Project>
+      <Name>Xamarin.Smartlook</Name>
+      <SkipGetTargetFrameworkProperties></SkipGetTargetFrameworkProperties>
+      <AdditionalProperties></AdditionalProperties>
+      <ReferenceOutputAssembly></ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="NuGet.Build.Packaging">
+      <Version>0.2.5-dev.8</Version>
+      <PrivateAssets>All</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.Common.targets" />
+  <Import Project="$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.targets" Condition="Exists('$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.targets')" />
+</Project>
