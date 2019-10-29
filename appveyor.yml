@@ -16,9 +16,8 @@ dotnet_csproj:
   assembly_version: '{version}'
   file_version: '{version}'
   informational_version: '{version}'
-build:
-  publish_nuget: true
-  verbosity: minimal
+build_script:
+- cmd: msbuild /p:Configuration=Release
 artifacts:
 - path: Xamarin.Smartlook.*.nuspec
   name: NuGet
