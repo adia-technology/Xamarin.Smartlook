@@ -48,12 +48,12 @@
       <Name>Xamarin.Smartlook.iOS</Name>
       <ReferenceSourceTarget>ProjectReference</ReferenceSourceTarget>
     </ProjectReference>
-    <ProjectReference Include="..\Xamarin.Smartlook\Xamarin.Smartlook.csproj">
-      <Project>{FAF56D4B-0226-4755-8A5A-B5077B879B09}</Project>
-      <Name>Xamarin.Smartlook</Name>
+    <ProjectReference Include="..\Xamarin.Smartlook.Standard\Xamarin.Smartlook.Standard.csproj">
+      <Project>{7B51F4E4-0CE5-43E2-81F3-87B357A7BC7F}</Project>
+      <Name>Xamarin.Smartlook.Standard</Name>
       <SkipGetTargetFrameworkProperties></SkipGetTargetFrameworkProperties>
       <AdditionalProperties></AdditionalProperties>
-      <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
+      <ReferenceOutputAssembly></ReferenceOutputAssembly>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
