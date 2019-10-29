@@ -1,5 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+      <ItemDefinitionGroup>
+      <PreBuildEvent>
+        <Command>pwsh -WorkingDirectory ${ProjectDir} ${ProjectDir}/DownloadSmartlookSdk.ps1</Command>
+        <Message>Downloading Smartlook SDK</Message>
+      </PreBuildEvent>
+    </ItemDefinitionGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -22,6 +28,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <PreBuildEventUseInBuild>true</PreBuildEventUseInBuild>
     <CustomCommands>
       <CustomCommands>
         <Command>
@@ -38,6 +45,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <PreBuildEventUseInBuild>true</PreBuildEventUseInBuild>        
     <CustomCommands>
       <CustomCommands>
         <Command>
