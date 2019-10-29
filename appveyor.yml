@@ -17,6 +17,7 @@ dotnet_csproj:
   file_version: '{version}'
   informational_version: '{version}'
 build_script:
+- cmd: msbuild -t:restore
 - cmd: msbuild /p:Configuration=Release
 artifacts:
 - path: Xamarin.Smartlook.*.nuspec
