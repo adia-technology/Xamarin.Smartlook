@@ -42,7 +42,7 @@
       <CustomCommands>
         <Command>
           <type>BeforeBuild</type>
-          <command>curl https://sdk.smartlook.com/ios/smartlook-ios-sdk-1.2.3.28.zip --output ./smartlook-ios-sdk-1.2.3.28.zip --create-dirs</command>
+          <command>curl https://sdk.smartlook.com/ios/smartlook-ios-sdk-1.2.3.28.zip --output ./smartlook-ios-sdk-1.2.3.28.zip --create-dirs &amp;&amp; unzip -a ./smartlook-ios-sdk-1.2.3.28.zip</command>
           <workingdir>${ProjectDir}</workingdir>
         </Command>
       </CustomCommands>

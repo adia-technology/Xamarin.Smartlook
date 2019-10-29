@@ -26,6 +26,7 @@ workflows:
             #!/usr/bin/env bash
 
             curl https://sdk.smartlook.com/ios/smartlook-ios-sdk-1.2.3.28.zip --output ./Xamarin.Smartlook.iOS.Bindings/smartlook-ios-sdk-1.2.3.28.zip --create-dirs
+            unzip -a ./Xamarin.Smartlook.iOS.Bindings/smartlook-ios-sdk-1.2.3.28.zip -d ./Xamarin.Smartlook.iOS.Bindings
     - script@1.1.5:
         inputs:
         - content: |
