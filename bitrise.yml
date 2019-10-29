@@ -19,7 +19,7 @@ workflows:
         - content: |+
             #!/usr/bin/env bash
             
-            msbuild
+            msbuild /p:Configuration=Release
             nuget pack Xamarin.Smartlook.nuspec -properties Configuration=Release
             nuget push *.nupkg -Source https://api.nuget.org/v3/index.json -ApiKey $NUGET_API_KEY
 
