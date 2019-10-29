@@ -16,9 +16,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NuGet", "NuGet", "{DA57577C
 	ProjectSection(SolutionItems) = preProject
 		Xamarin.Smartlook.nuspec = Xamarin.Smartlook.nuspec
 		bitrise.yml = bitrise.yml
+		version = version
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.Smartlook", "Xamarin.Smartlook\Xamarin.Smartlook.csproj", "{AD7465EE-AD79-4346-BC95-3349C3EA56BE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Properties", "Properties", "{C5314796-C12E-4DCA-BF22-789EF7318C61}"
+	ProjectSection(SolutionItems) = preProject
+		GlobalAssemblyInfo.cs = GlobalAssemblyInfo.cs
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

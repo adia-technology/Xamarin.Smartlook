@@ -3,7 +3,7 @@
     <metadata>
         <id>Xamarin.Smartlook</id>
         <title>Xamarin.Smartlook</title>
-        <version>0.0.4</version>
+        <version>$Version$</version>
         <description>Multiplatform library that makes it easy to start tracking sessions with Smartlook.com in your Xamarin application. It encapsulates both native SDKs provided by Smartlook.</description>
         <authors>rnowosielski</authors>
         <owners>Rafał Nowosielski</owners>

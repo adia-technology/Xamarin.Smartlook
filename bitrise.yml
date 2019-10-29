@@ -30,17 +30,27 @@ workflows:
         inputs:
         - content: |
             #!/usr/bin/env bash
+            VERSION=`cat version`
+            echo "[assembly: AssemblyVersion("\""$VERSION"\"")]" >> GlobalAssemblyInfo.cs
+            echo "[assembly: AssemblyFileVersion("\""$VERSION"\"")]" >> GlobalAssemblyInfo.cs
+    - script@1.1.5:
+        inputs:
+        - content: |
+            #!/usr/bin/env bash
             msbuild /p:Configuration=$BITRISE_XAMARIN_CONFIGURATION
     - script@1.1.5:
         inputs:
         - content: |-
             #!/usr/bin/env bash
-            nuget pack Xamarin.Smartlook.nuspec -Properties Configuration=$BITRISE_XAMARIN_CONFIGURATION
+            VERSION=`cat version`
+            nuget pack Xamarin.Smartlook.nuspec -Properties "Configuration=$BITRISE_XAMARIN_CONFIGURATION;Version=$VERSION"
     - slack@3.1.3:
         inputs:
         - channel: "#open-source"
-        - text: "$BITRISE_APP_TITLE build finished: $BITRISE_BUILD_URL"
-        - emoji: ":ghost: "
+        - text: ''
+        - emoji: ":ghost:"
+        - thumb_url: ''
+        - icon_url: ''
         - webhook_url: "$SLACK_OSS_WEBHOOK"
   deploy:
     before_run:
