@@ -66,11 +66,6 @@
     <LibraryProjectZip Include="Jars\smartlook-1.1.5-native.aar" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="NuGet.Build.Packaging">
-      <Version>0.2.2</Version>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-      <PrivateAssets>all</PrivateAssets>
-    </PackageReference>
     <PackageReference Include="Square.Retrofit2.ConverterGson">
       <Version>2.4.0.1</Version>
     </PackageReference>
