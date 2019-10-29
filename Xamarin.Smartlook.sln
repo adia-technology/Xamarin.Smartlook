@@ -17,7 +17,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NuGet", "NuGet", "{DA57577C-F227-44D3-B97D-598204B6026E}"
 	ProjectSection(SolutionItems) = preProject
 		Xamarin.Smartlook.nuspec = Xamarin.Smartlook.nuspec
-		bitrise.yml = bitrise.yml
+		appveyor.yml = appveyor.yml
 	EndProjectSection
 EndProject
 Global

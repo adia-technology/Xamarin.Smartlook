@@ -1,0 +1,29 @@
+﻿version: 0.0.{build}
+configuration: Release
+assembly_info:
+  patch: true
+  file: '**\AssemblyInfo.*'
+  assembly_version: '{version}'
+  assembly_file_version: '{version}'
+  assembly_informational_version: '{version}'
+dotnet_csproj:
+  patch: true
+  file: '**\*.csproj'
+  version: '{version}'
+  version_prefix: '{version}'
+  package_version: '{version}'
+  assembly_version: '{version}'
+  file_version: '{version}'
+  informational_version: '{version}'
+build:
+  publish_nuget: true
+  verbosity: minimal
+artifacts:
+- path: Xamarin.Smartlook.*.nuspec
+  name: NuGet
+deploy:
+- provider: NuGet
+  api_key:
+    secure: A+rqw2lTk0SLeNvdm46f1xAKHMAI9CjBtctDiP50ZH5XLImiYA/C3d8mHW5qjP3Q
+  on:
+    branch: master
