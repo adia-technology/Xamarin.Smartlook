@@ -17,8 +17,8 @@ dotnet_csproj:
   file_version: '{version}'
   informational_version: '{version}'
 build_script:
-- pwsh: -WorkingDirectory Xamarin.Smartlook.Android.Bindings Xamarin.Smartlook.Android.Bindings/DownloadSmartlookSdk.ps1                                                                                                                                        
-- pwsh: -WorkingDirectory Xamarin.Smartlook.iOS.Bindings Xamarin.Smartlook.iOS.Bindings/DownloadSmartlookSdk.ps1
+- cmd: pwsh -WorkingDirectory Xamarin.Smartlook.Android.Bindings Xamarin.Smartlook.Android.Bindings/DownloadSmartlookSdk.ps1                                                                                                                                        
+- cmd: pwsh -WorkingDirectory Xamarin.Smartlook.iOS.Bindings Xamarin.Smartlook.iOS.Bindings/DownloadSmartlookSdk.ps1
 - cmd: msbuild -t:restore
 - cmd: msbuild /p:Configuration=Release
 artifacts:
