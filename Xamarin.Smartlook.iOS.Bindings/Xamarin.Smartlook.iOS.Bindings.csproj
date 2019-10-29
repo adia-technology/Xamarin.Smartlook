@@ -1,11 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-      <ItemDefinitionGroup>
-      <PreBuildEvent>
-        <Command>pwsh -WorkingDirectory ${ProjectDir} ${ProjectDir}/DownloadSmartlookSdk.ps1</Command>
-        <Message>Downloading Smartlook SDK</Message>
-      </PreBuildEvent>
-    </ItemDefinitionGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -28,7 +22,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <PreBuildEventUseInBuild>true</PreBuildEventUseInBuild>
     <CustomCommands>
       <CustomCommands>
         <Command>
@@ -45,12 +38,11 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <PreBuildEventUseInBuild>true</PreBuildEventUseInBuild>        
     <CustomCommands>
       <CustomCommands>
         <Command>
           <type>BeforeBuild</type>
-          <command>pwsh ${ProjectDir}/DownloadSmartlookSdk.ps1</command>
+          <command>curl https://sdk.smartlook.com/ios/smartlook-ios-sdk-1.2.3.28.zip --output ./smartlook-ios-sdk-1.2.3.28.zip --create-dirs</command>
           <workingdir>${ProjectDir}</workingdir>
         </Command>
       </CustomCommands>
@@ -71,9 +63,6 @@
   </ItemGroup>
   <ItemGroup>
     <ObjcBindingCoreSource Include="Structs.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="DownloadSmartlookSdk.ps1" />
   </ItemGroup>
   <ItemGroup>
     <NativeReference Include="Smartlook\Smartlook.framework">

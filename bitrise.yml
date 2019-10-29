@@ -1,0 +1,61 @@
+﻿---
+format_version: '8'
+default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
+project_type: xamarin
+trigger_map:
+- push_branch: master
+  workflow: deploy
+- push_branch: "*"
+  workflow: build
+- pull_request_source_branch: "*"
+  workflow: build
+workflows:
+  build:
+    steps:
+    - git-clone@4.0.17: {}
+    - nuget-restore@1.0.7: {}
+    - script@1.1.5:
+        inputs:
+        - content: |-
+            #!/usr/bin/env bash
+
+            curl https://sdk.smartlook.com/android/release/com/smartlook/recording/app/1.1.5-native/app-1.1.5-native.aar --output ./Xamarin.Smartlook.Android.Bindings/Jars/smartlook-1.1.5-native.aar --create-dirs
+    - script@1.1.5:
+        inputs:
+        - content: |-
+            #!/usr/bin/env bash
+
+            curl https://sdk.smartlook.com/ios/smartlook-ios-sdk-1.2.3.28.zip --output ./Xamarin.Smartlook.iOS.Bindings/smartlook-ios-sdk-1.2.3.28.zip --create-dirs
+    - script@1.1.5:
+        inputs:
+        - content: |
+            #!/usr/bin/env bash
+            msbuild /p:Configuration=$BITRISE_XAMARIN_CONFIGURATION
+    - script@1.1.5:
+        inputs:
+        - content: |-
+            #!/usr/bin/env bash
+            nuget pack Xamarin.Smartlook.nuspec -Properties Configuration=$BITRISE_XAMARIN_CONFIGURATION
+  deploy:
+    before_run:
+    - build
+    steps:
+    - script@1.1.5:
+        inputs:
+        - content: |
+            #!/usr/bin/env bash
+            nuget push *.nupkg -Source https://api.nuget.org/v3/index.json -ApiKey $NUGET_API_KEY
+app:
+  envs:
+  - opts:
+      is_expand: false
+    BITRISE_PROJECT_PATH: Xamarin.Smartlook.sln
+  - opts:
+      is_expand: false
+    BITRISE_XAMARIN_CONFIGURATION: Release
+  - opts:
+      is_expand: false
+    BITRISE_XAMARIN_PLATFORM: Any CPU
+meta:
+  bitrise.io:
+    machine_type: performance

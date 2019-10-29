@@ -12,13 +12,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.Smartlook.iOS.Bindi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.Smartlook.Interfaces", "Xamarin.Smartlook.Interfaces\Xamarin.Smartlook.Interfaces.csproj", "{E2D96598-131A-4B48-A9B8-97B2AB7E9B28}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.Smartlook.Standard", "Xamarin.Smartlook.Standard\Xamarin.Smartlook.Standard.csproj", "{7B51F4E4-0CE5-43E2-81F3-87B357A7BC7F}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NuGet", "NuGet", "{DA57577C-F227-44D3-B97D-598204B6026E}"
 	ProjectSection(SolutionItems) = preProject
 		Xamarin.Smartlook.nuspec = Xamarin.Smartlook.nuspec
-		appveyor.yml = appveyor.yml
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.Smartlook", "Xamarin.Smartlook\Xamarin.Smartlook.csproj", "{AD7465EE-AD79-4346-BC95-3349C3EA56BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -46,10 +45,10 @@ Global
 		{E2D96598-131A-4B48-A9B8-97B2AB7E9B28}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E2D96598-131A-4B48-A9B8-97B2AB7E9B28}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E2D96598-131A-4B48-A9B8-97B2AB7E9B28}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7B51F4E4-0CE5-43E2-81F3-87B357A7BC7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7B51F4E4-0CE5-43E2-81F3-87B357A7BC7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7B51F4E4-0CE5-43E2-81F3-87B357A7BC7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7B51F4E4-0CE5-43E2-81F3-87B357A7BC7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD7465EE-AD79-4346-BC95-3349C3EA56BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD7465EE-AD79-4346-BC95-3349C3EA56BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD7465EE-AD79-4346-BC95-3349C3EA56BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD7465EE-AD79-4346-BC95-3349C3EA56BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
