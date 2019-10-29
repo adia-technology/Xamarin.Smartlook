@@ -14,12 +14,12 @@ workflows:
     - script@1.1.5:
         title: Do anything with Script step
     - nuget-restore@1.0.7: {}
-    - xamarin-archive@1.5.1: {}
     - script@1.1.5:
         inputs:
         - content: |+
             #!/usr/bin/env bash
-
+            
+            msbuild
             nuget pack Xamarin.Smartlook.nuspec -properties Configuration=Release
             nuget push *.nupkg -Source https://api.nuget.org/v3/index.json -ApiKey $NUGET_API_KEY
 
