@@ -18,7 +18,6 @@
             <dependency id="Square.Retrofit2.ConverterGson" version="2.4.0.1" />
             <dependency id="Xamarin.Kotlin.StdLib.Jdk7" version="1.3.50.1" />
           </group>
-          <group targetFramework=".NETPortable4.5-Profile111" />
           <group targetFramework="Xamarin.iOS1.0" />
           <group targetFramework=".NETStandard2.0" />
         </dependencies>
@@ -37,7 +36,7 @@
     <files>
         <file src="Xamarin.Smartlook.iOS\bin\$Configuration$\*.dll" target="lib\xamarinios10" />
         <file src="Xamarin.Smartlook.Android\bin\$Configuration$\*.dll" target="lib\monoandroid90" />
-        <file src="Xamarin.Smartlook\bin\$Configuration$\*.dll" target="lib\netstandard2.0" />
+        <file src="Xamarin.Smartlook\bin\$Configuration$\netstandard2.0\*.dll" target="lib\netstandard2.0" />
     </files>
    
 </package>
