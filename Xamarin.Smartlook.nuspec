@@ -22,21 +22,22 @@
           <group targetFramework="Xamarin.iOS1.0" />
           <group targetFramework=".NETStandard2.0" />
         </dependencies>
+        <frameworkAssemblies>
+            <frameworkAssembly assemblyName="Java.Interop" targetFramework="MonoAndroid9.0" />
+            <frameworkAssembly assemblyName="Mono.Android" targetFramework="MonoAndroid9.0" />
+            <frameworkAssembly assemblyName="System.Core" targetFramework="MonoAndroid9.0" />
+            <frameworkAssembly assemblyName="System" targetFramework="MonoAndroid9.0" />
+            <frameworkAssembly assemblyName="System.Xml" targetFramework="MonoAndroid9.0" />
+            <frameworkAssembly assemblyName="System.Core" targetFramework="Xamarin.iOS1.0" />
+            <frameworkAssembly assemblyName="System" targetFramework="Xamarin.iOS1.0" />
+            <frameworkAssembly assemblyName="System.Xml" targetFramework="Xamarin.iOS1.0" />
+            <frameworkAssembly assemblyName="Xamarin.iOS" targetFramework="Xamarin.iOS1.0" />
+        </frameworkAssemblies>
    </metadata>
     <files>
         <file src="Xamarin.Smartlook.iOS\bin\$Configuration$\*.dll" target="lib\xamarinios10" />
         <file src="Xamarin.Smartlook.Android\bin\$Configuration$\*.dll" target="lib\monoandroid90" />
         <file src="Xamarin.Smartlook.Standard\bin\$Configuration$\*.dll" target="lib\netstandard2.0" />
     </files>
-    <frameworkAssemblies>
-        <frameworkAssembly assemblyName="Java.Interop" targetFramework="MonoAndroid9.0" />
-        <frameworkAssembly assemblyName="Mono.Android" targetFramework="MonoAndroid9.0" />
-        <frameworkAssembly assemblyName="System.Core" targetFramework="MonoAndroid9.0" />
-        <frameworkAssembly assemblyName="System" targetFramework="MonoAndroid9.0" />
-        <frameworkAssembly assemblyName="System.Xml" targetFramework="MonoAndroid9.0" />
-        <frameworkAssembly assemblyName="System.Core" targetFramework="Xamarin.iOS1.0" />
-        <frameworkAssembly assemblyName="System" targetFramework="Xamarin.iOS1.0" />
-        <frameworkAssembly assemblyName="System.Xml" targetFramework="Xamarin.iOS1.0" />
-        <frameworkAssembly assemblyName="Xamarin.iOS" targetFramework="Xamarin.iOS1.0" />
-    </frameworkAssemblies>
+   
 </package>
