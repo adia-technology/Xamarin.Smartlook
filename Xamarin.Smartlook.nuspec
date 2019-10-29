@@ -37,7 +37,7 @@
     <files>
         <file src="Xamarin.Smartlook.iOS\bin\$Configuration$\*.dll" target="lib\xamarinios10" />
         <file src="Xamarin.Smartlook.Android\bin\$Configuration$\*.dll" target="lib\monoandroid90" />
-        <file src="Xamarin.Smartlook.Standard\bin\$Configuration$\*.dll" target="lib\netstandard2.0" />
+        <file src="Xamarin.Smartlook\bin\$Configuration$\*.dll" target="lib\netstandard2.0" />
     </files>
    
 </package>
