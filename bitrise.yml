@@ -3,26 +3,31 @@ format_version: '8'
 default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
 project_type: xamarin
 trigger_map:
+- push_branch: "master"
+  workflow: deploy
 - push_branch: "*"
-  workflow: primary
+  workflow: build
 - pull_request_source_branch: "*"
-  workflow: primary
+  workflow: build
 workflows:
-  primary:
-    steps:
-    - git-clone@4.0.17: {}
-    - script@1.1.5:
-        title: Do anything with Script step
-    - nuget-restore@1.0.7: {}
-    - script@1.1.5:
+    build:
+        steps:
+        - git-clone: {}
+        - script@1.1.5:
         inputs:
         - content: |+
             #!/usr/bin/env bash
-            
             msbuild /p:Configuration=Release
             nuget pack Xamarin.Smartlook.nuspec -properties Configuration=Release
-            nuget push *.nupkg -Source https://api.nuget.org/v3/index.json -ApiKey $NUGET_API_KEY
-
+    deploy:
+        before_run:
+        - build
+        steps:
+        - script@1.1.5:
+            inputs:
+            - content: |+
+                #!/usr/bin/env bash
+                nuget push *.nupkg -Source https://api.nuget.org/v3/index.json -ApiKey $NUGET_API_KEY
 app:
   envs:
   - opts:
