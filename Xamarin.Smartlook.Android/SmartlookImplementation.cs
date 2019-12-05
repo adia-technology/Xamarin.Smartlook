@@ -11,5 +11,10 @@
         {
             Com.Smartlook.Sdk.Smartlook.Smartlook.StartRecording();
         }
+
+        public void StopRecording()
+        {
+            Com.Smartlook.Sdk.Smartlook.Smartlook.StopRecording();
+        }
     }
 }

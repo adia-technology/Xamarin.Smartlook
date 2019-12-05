@@ -13,5 +13,10 @@ namespace Xamarin.Smartlook
         {
             throw new NotImplementedException("This is just the bait");
         }
+
+        public void StopRecording()
+        {
+            throw new NotImplementedException("This is just the bait");
+        }
     }
 }
