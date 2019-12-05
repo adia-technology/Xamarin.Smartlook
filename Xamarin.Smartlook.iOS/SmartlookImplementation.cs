@@ -18,5 +18,10 @@
         {
             SmartlookSdk.Smartlook_PublicInterface.StartRecording(this.implementation);
         }
+
+        public void StopRecording()
+        {
+            SmartlookSdk.Smartlook_PublicInterface.StopRecording(this.implementation);
+        }
     }
 }

@@ -23,5 +23,9 @@ namespace SmartlookSdk
         [Static]
         [Export("startRecording")]
         void StartRecording();
+
+        [Static]
+        [Export("stopRecording")]
+        void StopRecording();
     }
 }
